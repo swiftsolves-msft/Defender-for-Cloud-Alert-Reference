@@ -1193,11 +1193,11 @@
     },
     {
         "Alert": "A possible vulnerability to SQL Injection",
-        "Description": "An application has generated a faulty SQL statement in the database. This can indicate a possible vulnerability to SQL injection attacks. There are two possible reasons for a faulty statement. A defect in application code might have constructed the faulty SQL statement. Or",
-        "MITRE tactics": " application code or stored procedures didn’t sanitize user input when constructing the faulty SQL statement",
-        "Severity": " which can be exploited for SQL injection.",
-        "Alert Family": "PreAttack",
-        "Alert Type ()": "Medium"
+        "Description": "An application has generated a faulty SQL statement in the database. This can indicate a possible vulnerability to SQL injection attacks. There are two possible reasons for a faulty statement. A defect in application code might have constructed the faulty SQL statement. Or application code or stored procedures didn’t sanitize user input when constructing the faulty SQL statement which can be exploited for SQL injection.",
+        "MITRE tactics": "PreAttack",
+        "Severity": "Medium",
+        "Alert Family": "Alerts for SQL Database and Azure Synapse Analytics",
+        "Alert Type ()": "(SQL.DB_VulnerabilityToSqlInjection SQL.VM_VulnerabilityToSqlInjection SQL.MI_VulnerabilityToSqlInjection SQL.DW_VulnerabilityToSqlInjection Synapse.SQLPool_VulnerabilityToSqlInjection)"
     },
     {
         "Alert": "Attempted logon by a potentially harmful application",
@@ -1209,35 +1209,35 @@
     },
     {
         "Alert": "Log on from an unusual Azure Data Center",
-        "Description": "There has been a change in the access pattern to an SQL Server",
-        "MITRE tactics": " where someone has signed in to the server from an unusual Azure Data Center. In some cases",
-        "Severity": " the alert detects a legitimate action (a new application or Azure service). In other cases",
-        "Alert Family": " the alert detects a malicious action (attacker operating from breached resource in Azure).",
-        "Alert Type ()": "Probing"
+        "Description": "There has been a change in the access pattern to an SQL Server where someone has signed in to the server from an unusual Azure Data Center. In some cases the alert detects a legitimate action (a new application or Azure service). In other cases the alert detects a malicious action (attacker operating from breached resource in Azure).",
+        "MITRE tactics": "Probing",
+        "Severity": "Low",
+        "Alert Family": "Alerts for SQL Database and Azure Synapse Analytics",
+        "Alert Type ()": "(SQL.DB_DataCenterAnomaly SQL.VM_DataCenterAnomaly SQL.DW_DataCenterAnomaly SQL.MI_DataCenterAnomaly Synapse.SQLPool_DataCenterAnomaly)"
     },
     {
         "Alert": "Log on from an unusual location",
-        "Description": "There has been a change in the access pattern to SQL Server",
-        "MITRE tactics": " where someone has signed in to the server from an unusual geographical location. In some cases",
-        "Severity": " the alert detects a legitimate action (a new application or developer maintenance). In other cases",
-        "Alert Family": " the alert detects a malicious action (a former employee or external attacker).",
-        "Alert Type ()": "Exploitation"
+        "Description": "There has been a change in the access pattern to SQL Server where someone has signed in to the server from an unusual geographical location. In some cases the alert detects a legitimate action (a new application or developer maintenance). In other cases the alert detects a malicious action (a former employee or external attacker).",
+        "MITRE tactics": "Exploitation",
+        "Severity": "Medium",
+        "Alert Family": "Alerts for SQL Database and Azure Synapse Analytics",
+        "Alert Type ()": "(SQL.DB_GeoAnomaly SQL.VM_GeoAnomaly SQL.DW_GeoAnomaly SQL.MI_GeoAnomaly Synapse.SQLPool_GeoAnomaly)"
     },
     {
         "Alert": "Login from a principal user not seen in 60 days",
-        "Description": "A principal user not seen in the last 60 days has logged into your database. If this database is new or this is expected behavior caused by recent changes in the users accessing the database",
-        "MITRE tactics": " Defender for Cloud will identify significant changes to the access patterns and attempt to prevent future false positives.",
-        "Severity": "Exploitation",
-        "Alert Family": "Medium",
-        "Alert Type ()": "Alerts for SQL Database and Azure Synapse Analytics"
+        "Description": "A principal user not seen in the last 60 days has logged into your database. If this database is new or this is expected behavior caused by recent changes in the users accessing the database Defender for Cloud will identify significant changes to the access patterns and attempt to prevent future false positives.",
+        "MITRE tactics": "Exploitation",
+        "Severity": "Medium",
+        "Alert Family": "Alerts for SQL Database and Azure Synapse Analytics",
+        "Alert Type ()": "(SQL.DB_PrincipalAnomaly SQL.VM_PrincipalAnomaly SQL.DW_PrincipalAnomaly SQL.MI_PrincipalAnomaly Synapse.SQLPool_PrincipalAnomaly)"
     },
     {
         "Alert": "Login from a domain not seen in 60 days",
-        "Description": "A user has logged in to your resource from a domain no other users have connected from in the last 60 days. If this resource is new or this is expected behavior caused by recent changes in the users accessing the resource",
-        "MITRE tactics": " Defender for Cloud will identify significant changes to the access patterns and attempt to prevent future false positives.",
-        "Severity": "Exploitation",
-        "Alert Family": "Medium",
-        "Alert Type ()": "Alerts for SQL Database and Azure Synapse Analytics"
+        "Description": "A user has logged in to your resource from a domain no other users have connected from in the last 60 days. If this resource is new or this is expected behavior caused by recent changes in the users accessing the resource Defender for Cloud will identify significant changes to the access patterns and attempt to prevent future false positives.",
+        "MITRE tactics": "Exploitation",
+        "Severity": "Medium",
+        "Alert Family": "Alerts for SQL Database and Azure Synapse Analytics",
+        "Alert Type ()": "(SQL.DB_DomainAnomaly SQL.VM_DomainAnomaly SQL.DW_DomainAnomaly SQL.MI_DomainAnomaly Synapse.SQLPool_DomainAnomaly)"
     },
     {
         "Alert": "Login from a suspicious IP",
@@ -1257,11 +1257,11 @@
     },
     {
         "Alert": "Suspected brute force attack using a valid user",
-        "Description": "A potential brute force attack has been detected on your resource. The attacker is using the valid user (username)",
-        "MITRE tactics": " which has permissions to log in.",
-        "Severity": "PreAttack",
-        "Alert Family": "High",
-        "Alert Type ()": "Alerts for SQL Database and Azure Synapse Analytics"
+        "Description": "A potential brute force attack has been detected on your resource. The attacker is using the valid user (username) which has permissions to log in.",
+        "MITRE tactics": "PreAttack",
+        "Severity": "High",
+        "Alert Family": "Alerts for SQL Database and Azure Synapse Analytics",
+        "Alert Type ()": "(SQL.DB_BruteForce SQL.VM_BruteForce SQL.DW_BruteForce SQL.MI_BruteForce Synapse.SQLPool_BruteForce)"
     },
     {
         "Alert": "Suspected brute force attack",
@@ -1281,19 +1281,19 @@
     },
     {
         "Alert": "SQL Server potentially spawned a Windows command shell and accessed an abnormal external source",
-        "Description": "A suspicious SQL statement potentially spawned a Windows command shell with an external source that hasn’t been seen before. Executing a shell that accesses an external source is a method used by attackers to download malicious payload and then execute it on the machine and compromise it. This enables an attacker to perform malicious tasks under remote direction. Alternatively",
-        "MITRE tactics": " accessing an external source can be used to exfiltrate data to an external destination.",
-        "Severity": "Execution",
-        "Alert Family": "High",
-        "Alert Type ()": "Alerts for SQL Database and Azure Synapse Analytics"
+        "Description": "A suspicious SQL statement potentially spawned a Windows command shell with an external source that hasn’t been seen before. Executing a shell that accesses an external source is a method used by attackers to download malicious payload and then execute it on the machine and compromise it. This enables an attacker to perform malicious tasks under remote direction. Alternatively accessing an external source can be used to exfiltrate data to an external destination.",
+        "MITRE tactics": "Execution",
+        "Severity": "High",
+        "Alert Family": "Alerts for SQL Database and Azure Synapse Analytics",
+        "Alert Type ()": "(SQL.DB_ShellExternalSourceAnomaly SQL.MI_ShellExternalSourceAnomaly SQL.DW_ShellExternalSourceAnomaly SQL.VM_ShellExternalSourceAnomaly Synapse.SQLPool_ShellExternalSourceAnomaly)"
     },
     {
         "Alert": "Unusual payload with obfuscated parts has been initiated by SQL Server",
-        "Description": "Someone has initiated a new payload utilizing the layer in SQL Server that communicates with the operating system while concealing the command in the SQL query. Attackers commonly hide impactful commands which are popularly monitored like xp_cmdshell",
-        "MITRE tactics": " sp_add_job and others. Obfuscation techniques abuse legitimate commands like string concatenation",
-        "Severity": " casting",
-        "Alert Family": " base changing",
-        "Alert Type ()": " and others"
+        "Description": "Someone has initiated a new payload utilizing the layer in SQL Server that communicates with the operating system while concealing the command in the SQL query. Attackers commonly hide impactful commands which are popularly monitored like xp_cmdshell sp_add_job and others. Obfuscation techniques abuse legitimate commands like string concatenation casting base changing and others to avoid regex detection and hurt the readability of the logs.",
+        "MITRE tactics": "Execution",
+        "Severity": "High",
+        "Alert Family": "Alerts for SQL Database and Azure Synapse Analytics",
+        "Alert Type ()": "(SQL.VM_PotentialSqlInjection)"
     },
     {
         "Alert": "Exposed Postgres service with trust authentication configuration in Kubernetes detected (Preview)",
