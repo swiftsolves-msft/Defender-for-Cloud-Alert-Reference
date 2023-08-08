@@ -4,4 +4,4 @@ The following .csv and .json are captured Microsoft Defender for Cloud security 
 
 URL Reference: [Security alerts - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference)
 
-Last Captured: July, 27th, 2023
+Last Captured: August, 7th, 2023
